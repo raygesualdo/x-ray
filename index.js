@@ -92,6 +92,7 @@ function Xray() {
         // ensure that a@href is a URL
         if (!isUrl(url)) {
           debug('%s is not a url!', url);
+          return next(null, undefined);
           return next(new Error(url + ' is not a URL'));
         }
 
